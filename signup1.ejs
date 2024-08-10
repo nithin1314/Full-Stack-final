@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Page</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: url('https://images.unsplash.com/photo-1505144808419-1957a94ca61e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80') no-repeat center center fixed;
+            background-size: cover;
+        }
+        form {
+            max-width: 400px;
+            width: 90%;
+            padding: 40px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+        }
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 30px;
+            font-size: 28px;
+        }
+        input[type="text"], input[type="email"], input[type="password"] {
+            width: calc(100% - 22px);
+            padding: 12px;
+            margin: 15px 0;
+            border: none;
+            border-bottom: 2px solid #3498db;
+            background-color: transparent;
+            transition: border-color 0.3s;
+            font-size: 16px;
+        }
+        input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus {
+            outline: none;
+            border-bottom-color: #2980b9;
+        }
+        input[type="submit"] {
+            background-color: #3498db;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s, transform 0.1s;
+            margin-top: 20px;
+        }
+        input[type="submit"]:hover {
+            background-color: #2980b9;
+        }
+        input[type="submit"]:active {
+            transform: scale(0.98);
+        }
+    </style>
+</head>
+<body>
+    <form action="/signUpSubmit" method="POST">
+        <h1>Create Account</h1>
+        <input type="text" name="name" placeholder="Name" required><br>
+        <input type="text" name="pn" placeholder="Phone Number" required><br>
+        <input type="email" name="em" placeholder="Email" required><br>
+        <input type="password" name="pw" placeholder="Password" required><br>
+        <input type="submit" value="Sign Up">
+    </form>
+</body>
+</html>
